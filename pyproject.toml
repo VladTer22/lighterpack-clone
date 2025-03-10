@@ -1,0 +1,30 @@
+[tool.black]
+line-length = 100
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+include_trailing_comma = true
+skip_glob = ["*/migrations/*", "*/venv/*"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "backpack_planner.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+testpaths = ["gear_items", "gear_lists", "users", "core"]
