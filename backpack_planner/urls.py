@@ -24,9 +24,9 @@ urlpatterns = [
     ),
     
     # API endpoints
-    # path("api/v1/users/", include("users.urls")),
-    # path("api/v1/gear-items/", include("gear_items.urls")),
-    # path("api/v1/gear-lists/", include("gear_lists.urls")),
+    path("api/v1/users/", include("users.urls")),
+    path("api/v1/gear-items/", include("gear_items.urls")),
+    path("api/v1/gear-lists/", include("gear_lists.urls")),
 ]
 
 if settings.DEBUG:
